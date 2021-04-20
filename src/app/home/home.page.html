@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons  slot="end">
+
+      <ion-button>
+        <ion-icon name="cog" slot="icon-only"></ion-icon>
+      </ion-button>
+      
+      <ion-button>
+        <ion-icon name="cog" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+     <ion-title>
+       Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Hello {{ name }}</h1>
+  
+  <!-- Buttons and Icons-->
+  
+  <ion-button  color={{preferedColor}}  expand="full" (click)="showHideList()">{{isListHidden ? 'Afficher La Liste' : 'Masquer La liste'}}</ion-button>
+  <ion-button  color="danger"   expand="block">My Button</ion-button>
+  
+  <ion-button [color]="preferedColor"   expand="block" >  
+    <ion-icon name="car"></ion-icon>
+  </ion-button>
+
+
+<!-- List and Chips -->
+  <ion-list [hidden]="isListHidden"> <!-- Can also use [hidden]="true/false"-->
+    <ion-list-header> Countries</ion-list-header>
+    <ion-item *ngFor="let country of countryList"> 
+      <ion-avatar slot="start">
+        <ion-img src="/assets/French Flag.jpg"></ion-img>
+      </ion-avatar>
+        <ion-label>{{country.name}}
+          <p>{{country.mainCity}}</p>
+        </ion-label>
+        <ion-chip>10</ion-chip>
+    </ion-item> 
+    
+    
+    <!--
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img src="/assets/English Flag.jpg"></ion-img>
+      </ion-avatar>
+        <ion-label>England 
+          <p>London</p>
+        </ion-label>
+        <ion-chip>5</ion-chip>
+    </ion-item> 
+    
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img src="/assets/German Flag.jpg"></ion-img>
+      </ion-avatar>
+          <ion-label>Germany 
+            <p>Berlin</p>
+          </ion-label>
+          <ion-chip>7</ion-chip>
+    </ion-item> 
+     -->
+  </ion-list>
+ 
+  
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      This is ionic footer
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
