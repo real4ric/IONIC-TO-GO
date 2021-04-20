@@ -35,13 +35,15 @@
   <ion-list [hidden]="isListHidden"> <!-- Can also use [hidden]="true/false"-->
     <ion-list-header> Countries</ion-list-header>
     <ion-item *ngFor="let country of countryList"> 
+      
       <ion-avatar slot="start">
-        <ion-img src="/assets/French Flag.jpg"></ion-img>
+        <ion-img src="/assets/{{ country.flag}}" *ngIf="country.flag"></ion-img>
       </ion-avatar>
-        <ion-label>{{country.name}}
-          <p>{{country.mainCity}}</p>
+        
+      <ion-label>{{country.name}}         
+        <p>{{country.mainCity}}</p>
         </ion-label>
-        <ion-chip>10</ion-chip>
+        <ion-chip slot="end">{{country.population}}</ion-chip>
     </ion-item> 
     
     

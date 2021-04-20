@@ -20,9 +20,9 @@ export class HomePage {
   public isListHidden = true;
 
   public countryList = [
-    {name: 'France', mainCity: 'paris', flag: 'French Flag.jpg'},
-    {name: 'England', mainCity: 'London', flag: 'English Flag.jpg'},
-    {name: 'Germany', mainCity: 'Berlin', flag: null}
+    {name: 'France', mainCity: 'paris', flag: 'French Flag.jpg', population: 67},
+    {name: 'England', mainCity: 'London', flag: 'English Flag.jpg', population: 55},
+    {name: 'Germany', mainCity: 'Berlin', flag: null, population: 85}
   ];
 
 
