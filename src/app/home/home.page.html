@@ -4,7 +4,7 @@
     <ion-buttons  slot="end">
 
       <ion-button>
-        <ion-icon name="cog" slot="icon-only"></ion-icon>
+        <ion-icon name="cog" slot="icon-only"></ion-icon>  <!--settings icon-->
       </ion-button>
       
       <ion-button>
@@ -18,13 +18,16 @@
   </ion-toolbar>
 </ion-header>
 
+
+
+
 <ion-content>
   <h1>Hello {{ name }}</h1>
   
   <!-- Buttons and Icons-->
   
   <ion-button  color={{preferedColor}}  expand="full" (click)="showHideList()">{{isListHidden ? 'Afficher La Liste' : 'Masquer La liste'}}</ion-button>
-  <ion-button  color="danger"   expand="block">My Button</ion-button>
+  <ion-button  color="danger"   expand="block" routerLink="/form">Formulaire</ion-button>
   
   <ion-button [color]="preferedColor"   expand="block" >  
     <ion-icon name="car"></ion-icon>
