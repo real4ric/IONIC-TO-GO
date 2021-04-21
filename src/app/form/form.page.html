@@ -15,6 +15,9 @@
   <ion-list>
     <h2>Bonjour {{person.firstName}} {{person.name}}</h2>
     <h4>Vous Avez {{person.age}} Ans!</h4>   
+    <h4>Vous Etes {{person.job}}</h4>
+    <h4>Votre Competence est {{person.skill}}</h4>
+    
     <ion-item>
       <ion-label position="stacked">Nom: </ion-label>
         <ion-input placeholder="Saisir Votre Nom" [(ngModel)]="person.name"></ion-input>
@@ -29,5 +32,27 @@
       <ion-label position="floating"> Age: </ion-label>
         <ion-input type="number" min=0 placeholder="Saisir Votre Age" [(ngModel)]="person.age"> </ion-input>     
     </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Profession: </ion-label>
+      <ion-select [(ngModel)]="person.job">
+        <ion-select-option>Developpeur</ion-select-option>
+        <ion-select-option>Banquier</ion-select-option>
+        <ion-select-option>Agriculturist</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Competence: </ion-label>
+      <ion-select [(ngModel)]="person.skill">
+        <ion-select-option>HTML</ion-select-option>
+        <ion-select-option>CSS</ion-select-option>
+        <ion-select-option>JAVASCRIPT</ion-select-option>
+        <ion-select-option>Node.js</ion-select-option>
+        <ion-select-option>ANGULAR</ion-select-option>
+        <ion-select-option>IONIC</ion-select-option>
+      </ion-select>
+    </ion-item>
+
   </ion-list>
 </ion-content>

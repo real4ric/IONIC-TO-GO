@@ -10,7 +10,9 @@ export class FormPage implements OnInit {
   public person = {
     name: null,
     firstName: null,
-    age: null
+    age: null,
+    job: null,
+    skill: null
   }
 
   constructor() { }
