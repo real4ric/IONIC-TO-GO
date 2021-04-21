@@ -12,4 +12,22 @@
 
 <ion-content>
 
+  <ion-list>
+    <h2>Bonjour {{person.firstName}} {{person.name}}</h2>
+    <h4>Vous Avez {{person.age}} Ans!</h4>   
+    <ion-item>
+      <ion-label position="stacked">Nom: </ion-label>
+        <ion-input placeholder="Saisir Votre Nom" [(ngModel)]="person.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Prenom: </ion-label>
+        <ion-input placeholder="Saisir Votre Prenom" [(ngModel)]="person.firstName"> </ion-input>     
+    </ion-item> 
+
+    <ion-item>
+      <ion-label position="floating"> Age: </ion-label>
+        <ion-input type="number" min=0 placeholder="Saisir Votre Age" [(ngModel)]="person.age"> </ion-input>     
+    </ion-item>
+  </ion-list>
 </ion-content>
