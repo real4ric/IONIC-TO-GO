@@ -12,7 +12,7 @@ export class FormPage implements OnInit {
     firstName: null,
     age: null,
     job: null,
-    skill: null
+    skill: []
   }
 
   constructor() { }
